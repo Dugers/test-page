@@ -140,12 +140,12 @@ body {
 .skills__card-rating-3 {
   margin-top: auto;
   height: 26px;
-  background: url("/img/star-black.jpg") no-repeat 10% center, url("/img/star-black.jpg") no-repeat 30% center, url("/img/star-black.jpg") no-repeat 50% center, url("/img/star-grey.jpg") no-repeat 70% center, url("/img/star-grey.jpg") no-repeat 90% center;
+  background: url("img/star-black.jpg") no-repeat 10% center, url("img/star-black.jpg") no-repeat 30% center, url("img/star-black.jpg") no-repeat 50% center, url("img/star-grey.jpg") no-repeat 70% center, url("img/star-grey.jpg") no-repeat 90% center;
 }
 .skills__card-rating-4 {
   margin-top: auto;
   height: 26px;
-  background: url("/img/star-black.jpg") no-repeat 10% center, url("/img/star-black.jpg") no-repeat 30% center, url("/img/star-black.jpg") no-repeat 50% center, url("/img/star-black.jpg") no-repeat 70% center, url("/img/star-grey.jpg") no-repeat 90% center;
+  background: url("img/star-black.jpg") no-repeat 10% center, url("img/star-black.jpg") no-repeat 30% center, url("img/star-black.jpg") no-repeat 50% center, url("img/star-black.jpg") no-repeat 70% center, url("img/star-grey.jpg") no-repeat 90% center;
 }
 
 .portfolio {
