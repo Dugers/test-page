@@ -1,0 +1,310 @@
+@import url("reset.css");
+@font-face {
+  font-family: "Gilroy-Medium";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: local("O"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: local("O"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype"), url("../fonts/Gilroy-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 1.125rem;
+  font-family: "Gilroy-Bold";
+  color: #828282;
+}
+
+.wrapper {
+  max-width: 1003px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-bottom: 105px;
+}
+.header .nav {
+  display: flex;
+  height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #828282;
+}
+.header .nav__item {
+  transition: color 1s ease 0s;
+}
+.header .nav__item:hover {
+  transition-duration: 1s;
+  color: #070707;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+}
+.header__content-menu {
+  display: none;
+}
+.header__content-text {
+  height: 160px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__content-img img {
+  max-width: 100%;
+}
+.header__content-language {
+  cursor: pointer;
+  color: #000000;
+  transform: rotate(-90deg) translate(27px, 25px);
+  font-size: 1rem;
+}
+.header__content-language span {
+  color: #828282;
+}
+.header__content-language span.selected {
+  color: #000000;
+}
+.header__content-name {
+  font-size: 3rem;
+  color: #070707;
+  flex: 0 0 120px;
+}
+.header__content-info {
+  align-self: flex-end;
+  line-height: 22px;
+  color: #070707;
+  flex: 0 0 160px;
+}
+
+.about {
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background: #F6F6F6;
+}
+.about .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__text {
+  margin-top: 18px;
+  text-align: center;
+}
+.about__text-line {
+  max-width: 480px;
+  margin-top: 50px;
+}
+.about__text-line:first-child {
+  margin-top: 0px;
+}
+
+.skills {
+  padding-top: 91px;
+  padding-bottom: 110px;
+}
+.skills .wrapper {
+  text-align: center;
+}
+.skills__title {
+  margin-bottom: 69px;
+}
+.skills__subtitle {
+  margin-bottom: 83px;
+}
+.skills__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+}
+.skills__card {
+  display: flex;
+  flex-direction: column;
+}
+.skills__card-name {
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
+.skills__card-name-name {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.skills__card-rating-3 {
+  margin-top: auto;
+  height: 26px;
+  background: url("/img/star-black.jpg") no-repeat 10% center, url("/img/star-black.jpg") no-repeat 30% center, url("/img/star-black.jpg") no-repeat 50% center, url("/img/star-grey.jpg") no-repeat 70% center, url("/img/star-grey.jpg") no-repeat 90% center;
+}
+.skills__card-rating-4 {
+  margin-top: auto;
+  height: 26px;
+  background: url("/img/star-black.jpg") no-repeat 10% center, url("/img/star-black.jpg") no-repeat 30% center, url("/img/star-black.jpg") no-repeat 50% center, url("/img/star-black.jpg") no-repeat 70% center, url("/img/star-grey.jpg") no-repeat 90% center;
+}
+
+.portfolio {
+  background: #F6F6F6;
+  padding-top: 113px;
+  padding-bottom: 96px;
+}
+.portfolio .wrapper {
+  text-align: center;
+}
+.portfolio__title {
+  margin-bottom: 47px;
+}
+.portfolio__card {
+  margin-bottom: 100px;
+}
+.portfolio__card-img {
+  margin-bottom: 45px;
+}
+.portfolio__card-img img {
+  max-width: 100%;
+}
+.portfolio__card-link {
+  text-decoration: underline;
+}
+.portfolio__card:last-child {
+  margin-bottom: 0;
+}
+
+.contacts {
+  padding-top: 114px;
+  padding-bottom: 123px;
+}
+.contacts .wrapper {
+  text-align: center;
+}
+.contacts__subtitle {
+  max-width: 275px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.contacts__button {
+  background-color: #070707;
+  color: #FFFFFF;
+  line-height: 22px;
+  padding: 10px 29px;
+  border-radius: 25px;
+}
+.contacts__cards {
+  max-width: 342px;
+  margin: 0 auto;
+  margin-top: 91px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.contacts__text {
+  font-size: 0.875rem;
+  font-family: "Gilroy-Medium";
+}
+
+.title {
+  color: #070707;
+  font-size: 2.125rem;
+}
+
+.text {
+  color: #070707;
+  font-family: "Gilroy-Medium";
+}
+
+@media (max-width: 680px) {
+  .header {
+    margin-top: 68px;
+    position: relative;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header__content-text {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .header__content-name {
+    flex: 0 0 23px;
+    max-width: 124px;
+  }
+  .header__content-info {
+    align-self: flex-start;
+    max-width: 156px;
+  }
+  .header__content-language {
+    display: none;
+  }
+  .header__content-menu {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+  }
+  .header__content-menu::after, .header__content-menu::before, .header__content-menu span {
+    width: 33px;
+    content: "";
+    height: 4px;
+    background-color: black;
+  }
+  .skills__cards {
+    grid-template-columns: 1fr;
+  }
+  .skills__card-rating-3 {
+    margin: 0 auto;
+    width: 167px;
+  }
+  .skills__card-rating-4 {
+    margin: 0 auto;
+    width: 167px;
+  }
+  body:target .header {
+    padding: 0;
+  }
+  body:target .header .wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  body:target .header .nav {
+    margin-left: 26px;
+    position: fixed;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.125rem;
+    align-items: flex-start;
+    border: none;
+  }
+  body:target .header .nav ::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    background: url("/img/close-icon.jpg") center center no-repeat;
+  }
+  body:target .header__content {
+    display: none;
+  }
+  body:target main {
+    display: none;
+  }
+  body:target footer {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

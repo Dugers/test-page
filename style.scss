@@ -1,0 +1,328 @@
+@import url('reset.css');
+
+@mixin install-fonts($name) {
+    @font-face {
+        font-family: $name;
+        font-display: swap;
+        src: url("../fonts/" + $name + ".eot");
+        src: local("O"), url("../fonts/" + $name + ".woff") format("woff"), 
+                url("../fonts/" + $name + ".ttf") format("truetype"), 
+                url("../fonts/" + $name + ".svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@include install-fonts('Gilroy-Medium');
+@include install-fonts('Gilroy-Bold');
+
+
+body{
+    font-size: 1.125rem;
+    font-family: 'Gilroy-Bold';
+    color: #828282;
+}
+
+.wrapper{
+    max-width: 1003px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header{
+    padding-bottom: 105px;
+    .nav{
+        display: flex;
+        height: 88px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #828282;
+        &__item{
+            transition: color 1s ease 0s;
+            &:hover{
+                transition-duration: 1s;
+                color: #070707;
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        &-menu{
+            display: none;
+        }
+        &-text{
+            height: 160px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &-img{
+            img{
+                max-width: 100%;
+            }
+        }
+        &-language{
+            cursor: pointer;
+            color: #000000;
+            transform: rotate(-90deg) translate(27px, 25px);
+            font-size: 1rem;
+            span{
+                color: #828282;
+                &.selected{
+                    color: #000000;
+                }
+            }
+        }
+        &-name{
+            font-size: 3rem;
+            color: #070707;
+            flex: 0 0 120px;
+        }
+        &-info{
+            align-self: flex-end;
+            line-height: 22px;
+            color: #070707;
+            flex: 0 0 160px;
+        }
+    }
+}
+
+.about{
+    padding-top: 120px;
+    padding-bottom: 107px;
+    background: #F6F6F6;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__text{
+        margin-top: 18px;
+        text-align: center;
+        &-line{
+            max-width: 480px;
+            margin-top: 50px;
+            &:first-child{
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+.skills{
+    padding-top: 91px;
+    padding-bottom: 110px;
+    .wrapper{
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 69px;
+    }
+    &__subtitle{
+        margin-bottom: 83px;
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 50px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        &-name{
+            font-size: 0.875rem;
+            margin-top: 20px;
+            &-name{
+                margin-top: 5px;
+                margin-bottom: 40px;
+            }
+        }
+        &-rating-{
+            &3{
+                margin-top: auto;
+                height: 26px;
+                background: url('/img/star-black.jpg') no-repeat 10% center, url('/img/star-black.jpg') no-repeat 30% center, url('/img/star-black.jpg') no-repeat 50% center , url('/img/star-grey.jpg') no-repeat 70% center, url('/img/star-grey.jpg') no-repeat 90% center;
+            }
+            &4{
+                margin-top: auto;
+                height: 26px;
+                background: url('/img/star-black.jpg') no-repeat 10% center, url('/img/star-black.jpg') no-repeat 30% center, url('/img/star-black.jpg') no-repeat 50% center , url('/img/star-black.jpg') no-repeat 70% center, url('/img/star-grey.jpg') no-repeat 90% center;
+            }
+        }
+    }
+}
+
+.portfolio{
+    background: #F6F6F6;
+    padding-top: 113px;
+    padding-bottom: 96px;
+    .wrapper{
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 47px;
+    }
+    &__card{
+        margin-bottom: 100px;
+        &-img {
+            img{
+            max-width: 100%;
+            }
+            margin-bottom: 45px;
+        }
+        &-link{
+            text-decoration: underline;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts{
+    padding-top:114px;
+    padding-bottom:123px;
+    .wrapper{
+        text-align: center;
+    }
+    &__subtitle{
+        max-width: 275px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    &__button{
+        background-color: #070707;
+        color: #FFFFFF;
+        line-height: 22px;
+        padding: 10px 29px;
+        border-radius: 25px;
+    }
+    &__cards{
+        max-width: 342px;
+        margin: 0 auto;
+        margin-top: 91px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+    &__text{
+        font-size: 0.875rem;
+        font-family: 'Gilroy-Medium';
+    }
+}
+
+.title{
+    color: #070707;
+    font-size: 2.125rem;
+}
+
+.text{
+    color: #070707;
+    font-family: 'Gilroy-Medium';
+}
+
+
+@media (max-width: 680px) {
+    .header{
+        margin-top: 68px;
+        position: relative;
+        .nav{
+            display: none;
+        }
+        &__content{
+            &-text{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            &-name{
+                flex: 0 0 23px;
+                max-width: 124px;
+            }
+            &-info{
+                align-self: flex-start;
+                max-width: 156px;
+            }
+            &-language{
+                display: none;
+            }
+            &-menu{
+                display: block;
+                position: absolute;
+                cursor: pointer;
+                align-self: flex-end;
+                display: flex;
+                flex-direction: column;
+                height: 20px;
+                justify-content: space-between;
+                &::after, &::before, span{
+                    // margin-bottom: 5px;
+                    width: 33px;
+                    content: "";
+                    height: 4px;
+                    background-color: black;
+                }
+            }
+        }
+    }
+    .skills{
+        &__cards{
+            grid-template-columns: 1fr;
+        }
+        &__card{
+            &-rating{
+                &-3{
+                    margin: 0 auto;
+                    width: 167px;
+                }
+                &-4{
+                    margin: 0 auto;
+                    width: 167px;
+                }
+            }
+        }
+    }
+    body:target{
+        .header{
+            padding: 0;
+            .wrapper{
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .nav{
+                margin-left: 26px;
+                position: fixed;
+                height: 400px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                font-size: 2.125rem;
+                align-items: flex-start;
+                border: none;
+                ::before{
+                    content: "";
+                    position: absolute;
+                    top: -40px;
+                    right: 50px;
+                    width: 20px;
+                    height: 20px;
+                    background: url('/img/close-icon.jpg') center center no-repeat;
+                }
+            }
+            &__content{
+                display: none;
+            }
+        }
+        main{
+            display: none;
+        }
+        footer{
+            display: none;
+        }
+    }
+}
